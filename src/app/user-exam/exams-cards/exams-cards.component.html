@@ -1,0 +1,11 @@
+<mat-grid-list cols="4" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let exam of exams">
+    <a [routerLink]="'' + exam.id">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{exam.name}}</mat-card-title>
+        </mat-card-header>
+      </mat-card>
+    </a>
+  </mat-grid-tile>
+</mat-grid-list>

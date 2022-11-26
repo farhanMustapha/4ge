@@ -1,0 +1,21 @@
+:host {
+  width: 100%;
+
+  .add-line-btn {
+    margin: 2px;
+  }
+
+  .mat-table {
+    width: 100%;
+
+    .mat-cell {
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+  }
+  .resume {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px;
+  }
+}

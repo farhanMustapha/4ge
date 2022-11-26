@@ -1,0 +1,40 @@
+:host {
+  .container {
+//    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+//    height: 100%;
+    padding: 12px;
+    gap: 12px;
+
+    .disabled {
+      background-color: #eee;
+      cursor: default;
+    }
+    .mat-card {
+
+      .mat-icon {
+        font-size: 50px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .left {
+      margin: 12px;
+      width: 15%;
+      cursor: pointer;
+    }
+    .center {
+      margin: 12px;
+      width: 70%;
+    }
+    .right {
+      cursor: pointer;
+      margin: 12px;
+      width: 15%;
+    }
+  }
+
+}

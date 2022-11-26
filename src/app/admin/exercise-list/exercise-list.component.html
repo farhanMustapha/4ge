@@ -1,0 +1,13 @@
+<mat-action-list >
+  <ng-container *ngFor="let exercise of exercises; let index = index">
+    <button mat-list-item
+            (click)="selectExercise(exercise.id)"
+            [style]="{backgroundColor: (exercise.id == selectedExerciseId ? 'darkgrey' : '')}"
+    > Q. {{index + 1}} </button>
+  </ng-container>
+  <ng-container>
+    <button mat-raised-button color="primary" (click)="addExercise()">
+      +
+    </button>
+  </ng-container>
+</mat-action-list>

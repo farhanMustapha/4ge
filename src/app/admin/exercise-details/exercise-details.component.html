@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-title>Q. {{exercise.number > 0 ? exercise.number : 'Nouveau'}}</mat-card-title>
+  <mat-card-content>
+    <div class="form-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Question :</mat-label>
+        <textarea matInput [(ngModel)]="exercise.question"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Journal</mat-label>
+        <mat-select [(ngModel)]="exercise.correction.journal">
+          <mat-option *ngFor="let journal of journals" [value]="journal">{{journal}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <app-question-lines [correctionAccounts]="exercise.correction.accounts"></app-question-lines>
+    </div>
+
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button (click)="saveExercise()">Enregistrer</button>
+  </mat-card-actions>
+</mat-card>
+

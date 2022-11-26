@@ -1,0 +1,19 @@
+:host {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+
+    .mat-card-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mat-card-footer {
+      padding: 12px 20px 12px 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

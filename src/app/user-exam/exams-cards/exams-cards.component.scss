@@ -1,0 +1,13 @@
+:host {
+  a {
+    text-decoration: none;
+
+    .mat-card {
+      cursor: pointer;
+
+      &:hover {
+        border: 1px black solid;
+      }
+    }
+  }
+}

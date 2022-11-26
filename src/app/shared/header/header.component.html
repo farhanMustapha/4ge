@@ -1,0 +1,12 @@
+<mat-toolbar>
+  <span>4 Stages</span>
+  <span class="example-spacer"></span>
+  <a mat-button [routerLink]="'/home'">Accueil</a>
+  <ng-container *ngIf="isConnected">
+    <a mat-button href="#" (click)="logout()">Se déconnecter ({{userName}})</a>
+  </ng-container>
+  <ng-container *ngIf="!isConnected">
+    <a mat-button [routerLink]="'/registry/sign-in'">Se connecter</a>
+    <a mat-button [routerLink]="'/registry/sign-up'">S'enregistrer</a>
+  </ng-container>
+</mat-toolbar>

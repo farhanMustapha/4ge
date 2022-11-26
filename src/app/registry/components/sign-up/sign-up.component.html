@@ -1,0 +1,49 @@
+<div class="container">
+  <div style="width: 50%">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Se connecter</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field >
+          <mat-label>Nom prénom</mat-label>
+          <input [(ngModel)]="newUser.name" matInput/>
+        </mat-form-field>
+        <mat-form-field >
+          <mat-label>Email</mat-label>
+          <input [(ngModel)]="newUser.email" matInput/>
+        </mat-form-field>
+        <mat-form-field >
+          <mat-label>Tél.</mat-label>
+          <input [(ngModel)]="newUser.phone" matInput/>
+        </mat-form-field>
+        <mat-form-field >
+          <mat-label>Ville</mat-label>
+          <input [(ngModel)]="newUser.city" matInput/>
+        </mat-form-field>
+        <mat-form-field >
+          <mat-label>Niveau d'étude</mat-label>
+          <input [(ngModel)]="newUser.studyLevel" matInput/>
+        </mat-form-field>
+        <mat-form-field >
+          <mat-label>Domaine</mat-label>
+          <input [(ngModel)]="newUser.field" matInput/>
+        </mat-form-field>
+        <mat-form-field >
+          <mat-label>Mot de passe</mat-label>
+          <input [(ngModel)]="newUser.password" matInput type="password">
+        </mat-form-field>
+        <mat-form-field >
+          <mat-label>Confirmer</mat-label>
+          <input [(ngModel)]="newUser.confirm" matInput type="password">
+        </mat-form-field>
+
+      </mat-card-content>
+      <mat-card-footer>
+        <button mat-stroked-button  class="btn-block mat-primary" (click)="submit()">
+          Valider
+        </button>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>

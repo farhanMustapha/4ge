@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="left">
+    <mat-card (click)="backward()" [class]="index == 0 ? 'disabled' : ''">
+      <mat-icon>arrow_backward</mat-icon>
+    </mat-card>
+  </div>
+  <div class="center">
+    <mat-card>
+      Q. {{currentExercise?.number}} : {{currentExercise?.question}}
+    </mat-card>
+  </div>
+  <div class="right">
+    <mat-card (click)="forward()" [class]="index === exercises.length - 1 ? 'disabled' : ''">
+      <mat-icon>arrow_forward</mat-icon>
+    </mat-card>
+  </div>
+</div>
+<div class="container">
+  <app-question-lines [correctionAccounts]="lines"></app-question-lines>
+
+</div>

@@ -1,0 +1,28 @@
+<mat-action-list>
+  <ng-container *ngFor="let exam of exams">
+    <button mat-list-item
+            [style]="{backgroundColor: (exam.id == selectedExamId ? 'darkgrey' : '')}"
+            (click)="selectExam(exam.id)" >
+      {{exam.name}}
+    </button>
+  </ng-container>
+  <ng-container *ngIf="isOnAddingNew">
+    <div style="display: flex; flex-direction: column; gap: 5px">
+      <mat-form-field color="accent">
+        <mat-label>Nom d'exam</mat-label>
+        <input matInput #examName/>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="saveExam(examName.value)">
+        Valider
+      </button>
+      <button mat-raised-button color="accent" (click)="isOnAddingNew = false ">
+        Annuler
+      </button>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!isOnAddingNew">
+    <button mat-raised-button color="primary" (click)="isOnAddingNew = true">
+      Ajouter un exam
+    </button>
+  </ng-container>
+</mat-action-list>
